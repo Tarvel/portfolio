@@ -1,2 +1,5 @@
 **/extra.txt
 .vercel
+fly.toml
+/.github
+Dockerfile
