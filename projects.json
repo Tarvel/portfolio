@@ -21,19 +21,26 @@
     "live_url": "null"
   },  
   {
-    "title": "Flask ChatApp",
-    "description": "Flask Application that allows real-time communication between people.",
-    "stack": "Python, Flask, Socketio",
-    "code_url": "https://github.com/Tarvel/flask_chat_app",
-    "live_url": "null"
-  },
-  {
     "title": "EasyUploader",
     "description": "Local file utility app that lets users upload files, browse and download files from a directory, and receive local desktop notifications via HTTP.",
     "stack": "Python, Flask, Flask-WTF, Plyer",
     "code_url": "https://github.com/Tarvel/EasyUploader",
     "live_url": "null"
   },
+  {
+    "title": "Whatsapp Chatbot",
+    "description": "A Flask webhook for a WhatsApp chatbot that receives messages, generates AI responses using Google Gemini, and replies via the WhatsApp Cloud API.",
+    "stack": "Python, Flask, WhatsApp Cloud API, Google Gemini API",
+    "code_url": "https://github.com/Tarvel/WhatsappChatbot",
+    "live_url": "null"
+  },
+  {
+    "title": "Flask ChatApp",
+    "description": "Flask Application that allows real-time communication between people.",
+    "stack": "Python, Flask, Socketio",
+    "code_url": "https://github.com/Tarvel/flask_chat_app",
+    "live_url": "null"
+  },  
   {
     "title": "Student Register CRUD App",
     "description": "Flask Application to do simple Create, Read, Update and Delete on a database.",
