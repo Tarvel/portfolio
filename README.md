@@ -11,18 +11,12 @@
 ### Folder Structure 📂 (Highlighted):
 ```
 
-project-root/
-
-├── requirements.txt
-├── run.py
-│
-├── app/
-│   
+portfolio/
+├── static/
 ├── templates/
-│    └── index.html   
-├── static/       
-│    └──css/
-│       ├── pccc.jpg  
-│       └──favicon.ico
-│
+├── .gitignore
+├── README.md
+├── app.py
+├── projects.json
+├── requirements.txt
 
