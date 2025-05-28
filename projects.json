@@ -1,0 +1,86 @@
+[
+  {
+    "title": "Ecommerce Website",
+    "description": "A full-stack ecommerce website built with Flask, featuring product management, shopping cart, user authentication, and order tracking, showcasing a complete web application development skillset.",
+    "stack": "Python, Bootstrap, Postgresql",
+    "code_url": "https://github.com/Tarvel/eCommerce",
+    "live_url": "https://ecommerce-1-rlgb.onrender.com/"
+  },
+  {
+    "title": "Personal Portfolio Website",
+    "description": "Creating a portfolio website using Flask (micro-framework).",
+    "stack": "Python, Flask, Bootstrap",
+    "code_url": "https://github.com/Tarvel/portfolio",
+    "live_url": "https://babatunde-taiye.fly.dev"
+  },
+  {
+    "title": "Flask ChatApp",
+    "description": "Flask Application that allows real-time communication between people.",
+    "stack": "Python, Flask, Socketio",
+    "code_url": "https://github.com/Tarvel/flask_chat_app.git",
+    "live_url": "null"
+  },
+  {
+    "title": "EasyUploads",
+    "description": "Local file utility app that lets users upload files, browse and download files from a directory, and receive local desktop notifications via HTTP.",
+    "stack": "Python, Flask, Flask-WTF, Plyer",
+    "code_url": "https://github.com/Tarvel/EasyUploads",
+    "live_url": "null"
+  },
+  {
+    "title": "Student Register CRUD App",
+    "description": "Flask Application to do simple Create, Read, Update and Delete on a database.",
+    "stack": "Python, Flask, Bootstrap, SQLite",
+    "code_url": "https://github.com/Tarvel/StudentTableRegister",
+    "live_url": "null"
+  },
+  {
+    "title": "API Endpoints",
+    "description": "Flask API that registers and authenticates user. Create, delete and add users to organisations.",
+    "stack": "Python, Flask, Flask_JWT, Postgres",
+    "code_url": "https://github.com/Tarvel/HngTask2",
+    "live_url": "null"
+  },
+  {
+    "title": "Better Task Manager",
+    "description": "Flask task manager app that notifies you in real time when deadline set for task is up.",
+    "stack": "Python, Flask, Socketio",
+    "code_url": "https://github.com/Tarvel/HngTask2",
+    "live_url": "null"
+  },
+  {
+    "title": "User Info Weather API",
+    "description": "Flask API that Posts user's name then get user Ip, city and temperature.",
+    "stack": "Python, Flask, IPInfo",
+    "code_url": "https://github.com/Tarvel/api_endpoint",
+    "live_url": "null"
+  },
+  {
+    "title": "RESTful APIs App",
+    "description": "A scalable RESTful API built with Flask, handling CRUD operations for a fictional resource, demonstrating API design and implementation skills.",
+    "stack": "Python, Flask, Bootstrap, SQLite",
+    "code_url": "https://github.com/Tarvel/StudentTableRegister",
+    "live_url": "null"
+  },
+  {
+    "title": "Search Mini Flask App",
+    "description": "Flask app enhancing user experience with efficient profile search functionality.",
+    "stack": "Python, SQLite",
+    "code_url": "https://github.com/Tarvel/Profile-Search",
+    "live_url": "null"
+  },
+  {
+    "title": "Result Stalker",
+    "description": "An automatic script that monitors my school portal for newly released results.",
+    "stack": "Python, Playwright, Python-SMTP, Twilio",
+    "code_url": "https://github.com/Tarvel/Result_Stalker",
+    "live_url": "null"
+  },
+  {
+    "title": "Task Manager CRUD App",
+    "description": "Flask Application to do simple Create, Read, Update and Delete on a database.",
+    "stack": "Python, Flask, Bootstrap, SQLite",
+    "code_url": "https://github.com/Tarvel/TASK_MANAGER",
+    "live_url": "null"
+  }
+]

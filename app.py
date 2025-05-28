@@ -1,4 +1,5 @@
 from flask import Flask, render_template, send_file
+import json, os
 
 app = Flask(__name__)
 
@@ -10,8 +11,9 @@ def index():
 
 @app.route('/projects')
 def projects():
-    
-    return render_template('projects.html')
+    with open('projects.json', 'r') as json_data:
+        projects = json.load(json_data)
+    return render_template('projects.html', projects=projects)
 
 @app.route('/my_resume')
 def download_file():
