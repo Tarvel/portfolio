@@ -6,6 +6,7 @@
 ### Technologies Used:
 - Flask
 - Python 3.9
+- JSON
 
 
 ### Folder Structure 📂:
