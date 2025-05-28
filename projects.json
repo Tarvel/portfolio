@@ -28,10 +28,10 @@
     "live_url": "null"
   },
   {
-    "title": "EasyUploads",
+    "title": "EasyUploader",
     "description": "Local file utility app that lets users upload files, browse and download files from a directory, and receive local desktop notifications via HTTP.",
     "stack": "Python, Flask, Flask-WTF, Plyer",
-    "code_url": "https://github.com/Tarvel/EasyUploads",
+    "code_url": "https://github.com/Tarvel/EasyUploader",
     "live_url": "null"
   },
   {
