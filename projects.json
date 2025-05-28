@@ -14,10 +14,17 @@
     "live_url": "https://babatunde-taiye.fly.dev"
   },
   {
+    "title": "FunChat",
+    "description": "A Django-based community discussion platform where users can register, join topic-based chat rooms, post messages, and explore conversations by topics or activity.",
+    "stack": "Python, Django, SQLite/PostgreSQL, HTML/CSS",
+    "code_url": "https://github.com/Tarvel/FunChat",
+    "live_url": "null"
+  },  
+  {
     "title": "Flask ChatApp",
     "description": "Flask Application that allows real-time communication between people.",
     "stack": "Python, Flask, Socketio",
-    "code_url": "https://github.com/Tarvel/flask_chat_app.git",
+    "code_url": "https://github.com/Tarvel/flask_chat_app",
     "live_url": "null"
   },
   {
