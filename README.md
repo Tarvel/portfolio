@@ -8,9 +8,8 @@
 - Python 3.9
 
 
-### Folder Structure 📂 (Highlighted):
+### Folder Structure 📂:
 ```
-
 portfolio/
 ├── static/
 ├── templates/
