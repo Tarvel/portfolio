@@ -1,47 +1,67 @@
 {% extends "layout.html" %}
+
 {% block title %}About | Tai{% endblock %}
 
 {% block content %}
-<section class="mb-5">
-  <h2 class="text-info">About Me</h2>
-  <p class="intro-text">I'm Taiye Babatunde, a Computer Engineering student at the University of Ilorin with a passion for backend development, cybersecurity, and automation.
-     I’ve gained hands-on experience through personal projects, internships like HNG and collaborative work. My skills include Python, Flask, Django, PostgreSQL, Linux, and tools like Docker, Playwright.
-      I’m constantly learning and diving deeper into Backend and DevOps while building innovative projects.</p>
-  <a class="btn btn-outline-light" href="{{ url_for('download_file') }}" target="_blank"><i class="fas fa-download"></i> Resume</a>
+<section class="mb-5 hero-section animate__animated animate__fadeIn">
+  <div class="text-center">
+    <h2 class="text-info display-4">About Me</h2>
+    <p class="intro-text lead">I'm Taiye Babatunde, a Computer Engineering student at the University of Ilorin with a passion for backend development, cybersecurity, and automation. I’ve gained hands-on experience through personal projects, internships like HNG, and collaborative work. My skills include Python, Flask, Django, PostgreSQL, Linux, and tools like Docker, Playwright, and Nginx. I’m constantly learning and diving deeper into Backend and DevOps while building innovative projects.</p>
+    <a class="btn btn-outline-light btn-lg mt-3" href="{{ url_for('download_file') }}" target="_blank"><i class="fas fa-download"></i> Resume</a>
+  </div>
 </section>
 
 <section class="mb-5">
-  <h2 class="text-secondary">Skills</h2>
-  <div class="mb-3">
-    <label>Python</label>
-    <div class="progress">
-      <div class="progress-bar bg-info" style="width: 75%">75%</div>
+  <h3 class="text-secondary">Skills</h3>
+  <div class="d-flex flex-wrap justify-content-center">
+    <div class="text-center m-3">
+      <i class="fab fa-python fa-2x text-info"></i>
+      <p class="text-info">Python</p>
+    </div>
+    <div class="text-center m-3">
+      <i class="fas fa-laptop-code fa-2x text-info"></i>
+      <p class="text-info">Flask</p>
+    </div>
+    <div class="text-center m-3">
+      <i class="fas fa-globe fa-2x text-info"></i>
+      <p class="text-info">Django</p>
+    </div>
+    
+    <div class="text-center m-3">
+      <i class="fab fa-linux fa-2x text-info"></i>
+      <p class="text-info">Linux</p>
     </div>
   </div>
-  <div class="mb-3">
-    <label>Flask</label>
-    <div class="progress">
-      <div class="progress-bar bg-warning" style="width: 73%">73%</div>
-    </div>
-  </div>
-  <div class="mb-3">
-    <label>Django</label>
-    <div class="progress">
-      <div class="progress-bar bg-success" style="width: 68%">68%</div>
-    </div>
-  </div>
-  
-  <div class="mb-3">
-    <label>Linux / Terminal</label>
-    <div class="progress">
-      <div class="progress-bar bg-danger" style="width: 60%">60%</div>
-    </div>
-  </div>
-  <div class="mt-3">
-    <h5>Other Tools & Technologies</h5>
-    <span class="badge me-1">Docker</span>
-    <span class="badge me-1">Playwright</span>
-    <span class="badge me-1">Git & GitHub</span>
+  <div class="mt-4 text-center">
+    <h5 class="text-secondary">Other Tools & Technologies</h5>
+    <span class="badge bg-dark text-light me-1">Git & GitHub</span>
+    <span class="badge bg-dark text-light me-1">HTML</span>
+    <span class="badge bg-dark text-light me-1">CSS</span>
+    <span class="badge bg-dark text-light me-1">Docker</span>
+    <span class="badge bg-dark text-light me-1">Playwright</span>
+    <span class="badge bg-dark text-light me-1">PostgreSQL</span>
+    {% set celery = 'no' %}
+    {% if celey == 'yes' %}
+    <span class="badge bg-dark text-light me-1">Celery</span>
+    <span class="badge bg-dark text-light me-1">Redis</span>
+    {% endif %}
+    
+    
   </div>
 </section>
+
+<style>
+  .hero-section {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5));
+    padding: 2rem;
+    border-radius: 10px;
+  }
+  .animate__fadeIn {
+    animation: fadeIn 1s ease-in;
+  }
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+</style>
 {% endblock %}
