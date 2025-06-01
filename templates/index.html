@@ -1,116 +1,68 @@
-<!DOCTYPE html>
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+{% extends "layout.html" %}
+{% block title %}Tai | Backend Developer{% endblock %}
 
-  <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
-
-  <title>Home | Tai</title>
-  <style>
-    .container-sm {
-      max-width: 70%;
-      margin: auto;
-    }
-
-    @media screen and (max-width: 1200px) {
-      /* Adjust breakpoint as needed */
-      .container-sm {
-        max-width: 90%;
-        /* Adjust this as per your requirement */
-      }
-    }
-  </style>
-<style type="text/css">html.hs-messages-widget-open.hs-messages-mobile,html.hs-messages-widget-open.hs-messages-mobile body{overflow:hidden!important;position:relative!important}html.hs-messages-widget-open.hs-messages-mobile body{height:100%!important;margin:0!important}#hubspot-messages-iframe-container{display:initial!important;z-index:2147483647;position:fixed!important;bottom:0!important}#hubspot-messages-iframe-container.widget-align-left{left:0!important}#hubspot-messages-iframe-container.widget-align-right{right:0!important}#hubspot-messages-iframe-container.internal{z-index:1016}#hubspot-messages-iframe-container.internal iframe{min-width:108px}#hubspot-messages-iframe-container .hs-shadow-container{display:initial!important;z-index:-1;position:absolute;width:0;height:0;bottom:0;content:""}#hubspot-messages-iframe-container .hs-shadow-container.internal{display:none!important}#hubspot-messages-iframe-container .hs-shadow-container.active{width:400px;height:400px}#hubspot-messages-iframe-container iframe{display:initial!important;width:100%!important;height:100%!important;border:none!important;position:absolute!important;bottom:0!important;right:0!important;background:transparent!important}.hs-drag-handle{position:absolute;bottom:16px;cursor:grab;height:60px;display:none;align-items:center}.hs-drag-handle--right{right:76px}.hs-drag-handle--left{left:76px}.hs-drag-overlay{position:absolute;top:0;left:0;right:0;bottom:0;user-select:none;z-index:999;display:none}</style><script type="text/javascript">
-  window.hasMobileFirstExtension = true;</script></head>
-
-  <body class="container text-white" style="background-color: #110f10">
-    <div class="container-sm">
-      <div class="d-flex flex-row align-items-center align-self-center" style="padding-top: 80px">
-        <a href="">
-          <img src="{{ url_for('static', filename='me.jpg') }}" class="img-thumbnail rounded-circle" alt="Tai" width="100" height="100">
-        </a>
-
-        <h1 class="p-3">Tai</h1>
-        <div class="nav-line"></div>
-      </div>
-
-      <nav class="container navbar navbar-expand navbar-dark">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbar">
-          <div class="navbar-nav ml-auto">
-            <a href="/ " class="nav-item nav-link" id="home">Home</a>
-            <a href="/projects " class="nav-item nav-link" id="projects ">Projects</a>
-            <a href="https://tais-blog.up.railway.app" class="nav-item nav-link" id="about ">Blog</a>
-            
-          </div>
-        </div>
-      </nav>
-      <div class="container">
-<!-- <h1 class="text-secondary" align="">Home</h1> -->
-<p class="text-info">👋 Welcome to My Portfolio!</p>
-
-<p class="">
-  I'm Taiye Babatunde, a Computer Engineering student at the University of Ilorin with a growing passion for backend development, cybersecurity and automation.
-   I enjoy solving problems through code, exploring how systems work under the hood and constantly learning new technologies. 
-   I’ve gained hands on experience through personal projects, internship programs and collaborative work, all of which have helped shape my approach to software development and
-    problem solving.
-   Beyond tech, I’m curious, self driven and always open to challenges that help me grow.
-</p>
-
-<p class="text-info">About me</p>
-
-<p class="">
-  I specialize in backend development using Python and Flask/Django with experience in building APIs, 
-  handling authentication systems and working with databases like PostgreSQL and SQLite. 
-  I also have working knowledge of tools like Docker, Playwright, PyAutoGUI and Nginx. My skills extend into web automation, testing (unit and end-to-end) and basic frontend tweaking when needed. Currently, 
-  I'm deepening my knowledge in Backend development and DevOps while contributing to personal projects.
-</p>
-
-<p class="">
-
-</p>
-
-<div class="flex mb-3">
-  <a class="btn btn-primary bg-dark mx-1 text-light mt-2 border border-secondary" href="{{ url_for('download_file') }}" target="_blank" rel="noopener noreferrer">
-    <span class="fa fa-download"></span> Download my resume
-  </a>
-  
-  <a class="btn btn-primary bg-dark mx-1 text-light mt-2 border border-secondary" href="mailto:taiyebabatundejames@gmail.com" target="_blank" rel="noopener noreferrer">
-    <span class="fa fa-envelope"></span> Email me
-  </a>
-
-  <a class="btn btn-primary bg-dark mx-1 text-light mt-2 border border-secondary" data-toggle="Github" href="https://github.com/tarvel" target="_blank" rel="noopener noreferrer">
-    <span class="fa fa-github"></span>
-  </a>
-
-  <a class="btn btn-primary bg-dark mx-1 text-light mt-2 border border-secondary" href="https://twitter.com/_tai_e" target="_blank" rel="noopener noreferrer">
-    <span class="fa fa-twitter"></span>
-  </a>
-  
-</div>
+{% block content %}
+<section class="mb-5 hero-section animate__animated animate__fadeIn">
+  <div class="text-center">
+    <h2 class="text-info display-4">👋 Welcome to My Portfolio!</h2>
+    <p class="intro-text lead">I'm Taiye Babatunde, a Backend Developer building secure and scalable systems using Python, Flask and Django.</p>
+    <a class="btn btn-outline-light btn-lg mt-3" href="{{url_for('projects')}}">View Projects</a>
+  </div>
+</section>
 
 
-
-</div>
-      <small style="display: block; margin-top: 8rem">
-        <div class="time text-secondary mr-3 text-right">
-          2025 © Tai
-        </div>
-      </small>
+<section class="mb-5 text-center">
+  <h3 class="text-secondary">Tech Stack</h3>
+  <div class="d-flex flex-wrap justify-content-center">
+    <div class="text-center m-3">
+      <i class="fab fa-python fa-3x text-info"></i>
+      <p>Python</p>
     </div>
+    <br>
+    <div class="text-center m-3">
+      <i class="fas fa-laptop-code fa-3x text-success"></i>
+      <p>Flask</p>
+    </div>
+    <div class="text-center m-3">
+      <i class="fas fa-globe fa-3x text-success"></i>
+      <p>Django</p>
+    </div>
+    <div class="text-center m-3">
+      <i class="fas fa-database fa-3x text-warning"></i>
+      <p>PostgreSQL</p>
+    </div>
+    <div class="text-center m-3">
+      <i class="fab fa-docker fa-3x text-primary"></i>
+      <p>Docker</p>
+    </div>
+    <div class="text-center m-3">
+      <i class="fab fa-linux fa-3x text-danger"></i>
+      <p>Linux</p>
+    </div>
+  </div>
+</section>
 
-    <script src="https://js-eu1.hscollectedforms.net/collectedforms.js" type="text/javascript" id="CollectedForms-139843457" crossorigin="anonymous" data-leadin-portal-id="139843457" data-leadin-env="prod" data-loader="hs-scriptloader" data-hsjs-portal="139843457" data-hsjs-env="prod" data-hsjs-hublet="eu1"></script><script src="https://js-eu1.hs-banner.com/v2/139843457/banner.js" type="text/javascript" id="cookieBanner-139843457" data-cookieconsent="ignore" data-hs-ignore="true" data-loader="hs-scriptloader" data-hsjs-portal="139843457" data-hsjs-env="prod" data-hsjs-hublet="eu1"></script><script src="https://js-eu1.hs-analytics.net/analytics/1715781300000/139843457.js" type="text/javascript" id="hs-analytics"></script><script src="https://js-eu1.usemessages.com/conversations-embed.js" type="text/javascript" id="hubspot-messages-loader" data-loader="hs-scriptloader" data-hsjs-portal="139843457" data-hsjs-env="prod" data-hsjs-hublet="eu1"></script><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous "></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous "></script>
-    <script type="text/javascript " src="/static/index.js "></script>
+<section class="mb-5 text-center">
+  <h3 class="text-secondary">Connect With Me</h3>
+  <div class="d-flex justify-content-center">
+    <a href="https://github.com/tarvel" class="btn btn-outline-light btn-sm mx-2" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+    <a href="https://ng.linkedin.com/in/tarvel0" class="btn btn-outline-light btn-sm mx-2" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    <a href="https://twitter.com/_tai_e" class="btn btn-outline-light btn-sm mx-2" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+  </div>
+</section>
 
-    <!-- Start of HubSpot Embed Code -->
-    <script type="text/javascript" id="hs-script-loader" async="" defer="" src="//js-eu1.hs-scripts.com/139843457.js"></script>
-    <!-- End of HubSpot Embed Code -->
-  
-<iframe owner="archetype" title="archetype" style="display: none; visibility: hidden;"></iframe><div role="region" aria-label="Chat Widget" id="hubspot-messages-iframe-container" class="widget-align-right" style="min-height: 96px; min-width: 100px; width: 92px; height: 92px;"><div class="hs-shadow-container"></div><iframe src="https://app-eu1.hubspot.com/conversations-visitor/139843457/threads/utk/0f524b8d66ea400b8dc3da1155e9aea7?uuid=8a83ce6e1c104dd9b151232c19b7f622&amp;mobile=false&amp;mobileSafari=false&amp;hideWelcomeMessage=false&amp;hstc=&amp;domain=danienell.com&amp;inApp53=false&amp;messagesUtk=0f524b8d66ea400b8dc3da1155e9aea7&amp;url=https%3A%2F%2Fdanienell.com%2F&amp;inline=false&amp;isFullscreen=false&amp;globalCookieOptOut=&amp;isFirstVisitorSession=false&amp;isAttachmentDisabled=false&amp;isInitialInputFocusDisabled=false&amp;enableWidgetCookieBanner=false&amp;isInCMS=false" id="hubspot-conversations-iframe" title="Chat Widget" allowfullscreen="" data-test-id="chat-widget-iframe"></iframe></div></body>
+<style>
+  .hero-section {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5));
+    padding: 2rem;
+    border-radius: 10px;
+  }
+  .animate__fadeIn {
+    animation: fadeIn 1s ease-in;
+  }
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+</style>
+{% endblock %}

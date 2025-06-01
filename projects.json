@@ -40,6 +40,13 @@
     "stack": "Python, Flask, Socketio",
     "code_url": "https://github.com/Tarvel/flask_chat_app",
     "live_url": "null"
+  },
+  {
+    "title": "RESTful APIs App",
+    "description": "Flask API that registers and authenticates user. Create, delete and add users to organisations.",
+    "stack": "Python, Flask, Flask_JWT, Postgres",
+    "code_url": "https://github.com/Tarvel/HngTask2",
+    "live_url": "null"
   },  
   {
     "title": "Student Register CRUD App",
@@ -49,17 +56,10 @@
     "live_url": "null"
   },
   {
-    "title": "API Endpoints",
-    "description": "Flask API that registers and authenticates user. Create, delete and add users to organisations.",
-    "stack": "Python, Flask, Flask_JWT, Postgres",
-    "code_url": "https://github.com/Tarvel/HngTask2",
-    "live_url": "null"
-  },
-  {
-    "title": "Better Task Manager",
+    "title": "Task Manager",
     "description": "Flask task manager app that notifies you in real time when deadline set for task is up.",
     "stack": "Python, Flask, Socketio",
-    "code_url": "https://github.com/Tarvel/HngTask2",
+    "code_url": "https://github.com/Tarvel/beter-task-manager",
     "live_url": "null"
   },
   {
@@ -70,20 +70,6 @@
     "live_url": "null"
   },
   {
-    "title": "RESTful APIs App",
-    "description": "A scalable RESTful API built with Flask, handling CRUD operations for a fictional resource, demonstrating API design and implementation skills.",
-    "stack": "Python, Flask, Bootstrap, SQLite",
-    "code_url": "https://github.com/Tarvel/StudentTableRegister",
-    "live_url": "null"
-  },
-  {
-    "title": "Search Mini Flask App",
-    "description": "Flask app enhancing user experience with efficient profile search functionality.",
-    "stack": "Python, SQLite",
-    "code_url": "https://github.com/Tarvel/Profile-Search",
-    "live_url": "null"
-  },
-  {
     "title": "Result Stalker",
     "description": "An automatic script that monitors my school portal for newly released results.",
     "stack": "Python, Playwright, Python-SMTP, Twilio",
@@ -91,10 +77,10 @@
     "live_url": "null"
   },
   {
-    "title": "Task Manager CRUD App",
+    "title": "Task Queue",
     "description": "Flask Application to do simple Create, Read, Update and Delete on a database.",
     "stack": "Python, Flask, Bootstrap, SQLite",
-    "code_url": "https://github.com/Tarvel/TASK_MANAGER",
+    "code_url": "https://github.com/Tarvel/task-queue",
     "live_url": "null"
   }
 ]
