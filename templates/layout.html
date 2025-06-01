@@ -65,7 +65,10 @@
         <a class="nav-link {% if page == 'projects' %}active{% endif %}" href="/projects">Projects</a>
         <a class="nav-link {% if page == 'about' %}active{% endif %}" href="/about">About</a>
         <a class="nav-link {% if page == 'contact' %}active{% endif %}" href="/contact">Contact</a>
+        {% if blog == 'yes' %}  
         <a class="nav-link" href="https://tais-blog.up.railway.app" target="_blank">Blog</a>
+        
+        {% endif %}
       </div>
     </nav>
 
