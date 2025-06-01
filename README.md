@@ -1,6 +1,6 @@
 # PORTFOLIO
 
-![Static Badge](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+![Static Badge](https://img.shields.io/badge/Flask-black) 
 
 
 ### Technologies Used:
