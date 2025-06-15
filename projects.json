@@ -1,12 +1,5 @@
 [
   {
-    "title": "Ecommerce Website",
-    "description": "A full-stack ecommerce website built with Flask, featuring product management, shopping cart, user authentication, and order tracking, showcasing a complete web application development skillset.",
-    "stack": "Python, Bootstrap, Postgresql",
-    "code_url": "https://github.com/Tarvel/eCommerce",
-    "live_url": "https://ecommerce-1-rlgb.onrender.com/"
-  },
-  {
     "title": "Personal Portfolio Website",
     "description": "Creating a portfolio website using Flask (micro-framework).",
     "stack": "Python, Flask, Bootstrap",
@@ -19,7 +12,21 @@
     "stack": "Python, Django, SQLite/PostgreSQL, HTML/CSS",
     "code_url": "https://github.com/Tarvel/FunChat",
     "live_url": "null"
-  },  
+  },
+  {
+    "title": "Cooperative Management System",
+    "description": "A Django-based cooperative management system allowing members to handle deposits, withdrawals, loan applications, and dividend tracking, with robust admin tools for member management, transaction approvals, loan processing, and dividend distribution.",
+    "stack": "Python, Django, SQLite, HTML, Tailwind CSS",
+    "code_url": "https://github.com/Tarvel/coorperative-management-system/",
+    "live_url": "null"
+},
+  {
+    "title": "Ecommerce Website",
+    "description": "A full-stack ecommerce website built with Flask, featuring product management, shopping cart, user authentication, and order tracking, showcasing a complete web application development skillset.",
+    "stack": "Python, Bootstrap, Postgresql",
+    "code_url": "https://github.com/Tarvel/eCommerce",
+    "live_url": "https://ecommerce-1-rlgb.onrender.com/"
+  },
   {
     "title": "EasyUploader",
     "description": "Local file utility app that lets users upload files, browse and download files from a directory, and receive local desktop notifications via HTTP.",
