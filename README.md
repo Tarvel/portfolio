@@ -20,5 +20,5 @@ portfolio/
 ├── projects.json
 ├── .gitignore
 ├── README.md
-├── requirements.txt
+└── requirements.txt
 
