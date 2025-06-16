@@ -11,7 +11,7 @@
     "description": "A Django-based community discussion platform where users can register, join topic-based chat rooms, post messages, and explore conversations by topics or activity.",
     "stack": "Python, Django, SQLite/PostgreSQL, HTML/CSS",
     "code_url": "https://github.com/Tarvel/FunChat",
-    "live_url": "null"
+    "live_url": "https://funchat-696l.onrender.com/"
   },
   {
     "title": "Cooperative Management System",
