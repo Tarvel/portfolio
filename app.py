@@ -42,7 +42,7 @@ def contact():
 @app.route('/my_resume')
 def download_file():
     path = "static/Taiye_s_Resume.pdf"
-    return send_file(path, as_attachment=True, download_name="Taiye_s_Resume.pdf")
+    return send_file(path, as_attachment=True, download_name="Taiye_s_CV.pdf")
 
 
 
