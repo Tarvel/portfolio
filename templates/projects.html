@@ -9,6 +9,15 @@
     {% for project in projects %}
     <div class="col-md-4 mb-4">
       <div class="card bg-dark text-white">
+        {% if project.images %}
+        <!-- to open image -->
+        <img src="{{ project.images[0] }}" 
+             class="card-img-top img-fluid" 
+             alt="" 
+             style="cursor: pointer;"
+             data-bs-toggle="modal" 
+             data-bs-target="#projectModal{{ loop.index }}">
+        {% endif %}
         <div class="card-body">
           <div class="d-flex justify-content-between align-items-center">
             <h5 class="card-title font-weight-bold text-info">{{ project.title }}</h5>
@@ -27,6 +36,38 @@
         </div>
       </div>
     </div>
+
+    <!-- modal + slide sha-->
+    {% if project.images %}
+    <div class="modal fade" id="projectModal{{ loop.index }}" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark">
+          <div class="modal-body p-0">
+            <div id="carousel{{ loop.index }}" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                {% for image in project.images %}
+                <div class="carousel-item {% if loop.first %}active{% endif %}">
+                  <img src="{{ image }}" class="d-block w-100" alt="{{ project.title }}">
+                </div>
+                {% endfor %}
+              </div>
+              
+              <button class="carousel-control-prev" type="button" data-bs-target="#carousel{{ loop.index }}" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carousel{{ loop.index }}" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+          </div>
+          <div class="modal-footer bg-dark">
+            <h5 class="text-info mb-0">{{ project.title }}</h5>
+            <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
     {% endfor %}
   </div>
 </section>

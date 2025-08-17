@@ -1,5 +1,5 @@
 from flask import Flask, render_template, send_file, request
-import json, os
+import json
 from send_email import notify_mail
 
 app = Flask(__name__)

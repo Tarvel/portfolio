@@ -1,93 +1,128 @@
 [
   {
-    "title": "Personal Portfolio Website",
-    "description": "Creating a portfolio website using Flask (micro-framework).",
-    "stack": "Python, Flask, Bootstrap",
-    "code_url": "https://github.com/Tarvel/portfolio",
-    "live_url": "https://babatunde-taiye.fly.dev"
+    "title": "Streetwear Ecommerce Website",
+    "description": "A minimalist fashion e-commerce platform for a streetwear brand, featuring themed product drops, cart persistence without login, filterable collections, and a smooth checkout flow with PayStack integration.",
+    "stack": "Python, Django, Django templates, Tailwind, SQLite",
+    "code_url": "https://github.com/Tarvel/streetwear-ecommerce",
+    "live_url": "null",
+    "images": [
+  "static/PROJECT_IMAGES/street_wear/wimer_sample_1.png",
+  "static/PROJECT_IMAGES/street_wear/wimer_sample_2.png",
+  "static/PROJECT_IMAGES/street_wear/wimer_sample_3.png",
+  "static/PROJECT_IMAGES/street_wear/wimer_sample_4.png",
+  "static/PROJECT_IMAGES/street_wear/wimer_sample_5.png"
+]
   },
   {
     "title": "FunChat",
     "description": "A Django-based community discussion platform where users can register, join topic-based chat rooms, post messages, and explore conversations by topics or activity.",
     "stack": "Python, Django, SQLite/PostgreSQL, HTML/CSS",
     "code_url": "https://github.com/Tarvel/FunChat",
-    "live_url": "https://funchat-696l.onrender.com/"
+    "live_url": "https://funchat-696l.onrender.com/",
+    "images": [
+  "static/PROJECT_IMAGES/funchat/funchat_2.png",
+  "static/PROJECT_IMAGES/funchat/funchat_1.jpg",
+  "static/PROJECT_IMAGES/funchat/funchat_3.png"
+]
+  },
+  {
+    "title": "Personal Portfolio Website",
+    "description": "Creating a portfolio website using Flask (micro-framework).",
+    "stack": "Python, Flask, Bootstrap",
+    "code_url": "https://github.com/Tarvel/portfolio",
+    "live_url": "https://babatunde-taiye.fly.dev",
+    "images": ["static/PROJECT_IMAGES/portfolio/portfolio.png"]
   },
   {
     "title": "Cooperative Management System",
     "description": "A Django-based cooperative management system allowing members to handle deposits, withdrawals, loan applications, and dividend tracking, with robust admin tools for member management, transaction approvals, loan processing, and dividend distribution.",
     "stack": "Python, Django, SQLite, HTML, Tailwind CSS",
     "code_url": "https://github.com/Tarvel/coorperative-management-system/",
-    "live_url": "null"
-},
+    "live_url": "null",
+    "images": [
+      "static/PROJECT_IMAGES/cms/cms_1.png",
+      "static/PROJECT_IMAGES/cms/cms_2.png",
+      "static/PROJECT_IMAGES/cms/cms_3.png"
+  ]
+  },
   {
     "title": "Ecommerce Website",
     "description": "A full-stack ecommerce website built with Flask, featuring product management, shopping cart, user authentication, and order tracking, showcasing a complete web application development skillset.",
     "stack": "Python, Bootstrap, Postgresql",
     "code_url": "https://github.com/Tarvel/eCommerce",
-    "live_url": "https://ecommerce-1-rlgb.onrender.com/"
+    "live_url": "https://ecommerce-1-rlgb.onrender.com/",
+    "images": "null"
   },
   {
     "title": "EasyUploader",
     "description": "Local file utility app that lets users upload files, browse and download files from a directory, and receive local desktop notifications via HTTP.",
     "stack": "Python, Flask, Flask-WTF, Plyer",
     "code_url": "https://github.com/Tarvel/EasyUploader",
-    "live_url": "null"
+    "live_url": "null",
+    "images": "null"
   },
   {
     "title": "Whatsapp Chatbot",
     "description": "A Flask webhook for a WhatsApp chatbot that receives messages, generates AI responses using Google Gemini, and replies via the WhatsApp Cloud API.",
     "stack": "Python, Flask, WhatsApp Cloud API, Google Gemini API",
     "code_url": "https://github.com/Tarvel/WhatsappChatbot",
-    "live_url": "null"
+    "live_url": "null",
+    "images": "null"
   },
   {
     "title": "Flask ChatApp",
     "description": "Flask Application that allows real-time communication between people.",
     "stack": "Python, Flask, Socketio",
     "code_url": "https://github.com/Tarvel/flask_chat_app",
-    "live_url": "null"
+    "live_url": "null",
+    "images": "null"
   },
   {
     "title": "RESTful APIs App",
     "description": "Flask API that registers and authenticates user. Create, delete and add users to organisations.",
     "stack": "Python, Flask, Flask_JWT, Postgres",
     "code_url": "https://github.com/Tarvel/HngTask2",
-    "live_url": "null"
-  },  
+    "live_url": "null",
+    "images": "null"},
+
   {
     "title": "Student Register CRUD App",
     "description": "Flask Application to do simple Create, Read, Update and Delete on a database.",
     "stack": "Python, Flask, Bootstrap, SQLite",
     "code_url": "https://github.com/Tarvel/StudentTableRegister",
-    "live_url": "null"
+    "live_url": "null",
+    "images": "null"
   },
   {
     "title": "Task Manager",
     "description": "Flask task manager app that notifies you in real time when deadline set for task is up.",
     "stack": "Python, Flask, Socketio",
     "code_url": "https://github.com/Tarvel/beter-task-manager",
-    "live_url": "null"
+    "live_url": "null",
+    "images": "null"
   },
   {
     "title": "User Info Weather API",
     "description": "Flask API that Posts user's name then get user Ip, city and temperature.",
     "stack": "Python, Flask, IPInfo",
     "code_url": "https://github.com/Tarvel/api_endpoint",
-    "live_url": "null"
+    "live_url": "null",
+    "images": "null"
   },
   {
     "title": "Result Stalker",
     "description": "An automatic script that monitors my school portal for newly released results.",
     "stack": "Python, Playwright, Python-SMTP, Twilio",
     "code_url": "https://github.com/Tarvel/Result_Stalker",
-    "live_url": "null"
+    "live_url": "null",
+    "images": "null"
   },
   {
     "title": "Task Queue",
     "description": "Flask Application to do simple Create, Read, Update and Delete on a database.",
     "stack": "Python, Flask, Bootstrap, SQLite",
     "code_url": "https://github.com/Tarvel/task-queue",
-    "live_url": "null"
+    "live_url": "null",
+    "images": "null"
   }
 ]
