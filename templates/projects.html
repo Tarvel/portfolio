@@ -10,7 +10,7 @@
     <div class="col-md-4 mb-4">
       <div class="card bg-dark text-white">
         {% if project.images %}
-        <!-- to open image -->
+
         <img src="{{ project.images[0] }}" 
              class="card-img-top img-fluid" 
              alt="" 
@@ -37,7 +37,7 @@
       </div>
     </div>
 
-    <!-- modal + slide sha-->
+    
     {% if project.images %}
     <div class="modal fade" id="projectModal{{ loop.index }}" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg">
