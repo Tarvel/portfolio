@@ -7,3 +7,5 @@ Dockerfile
 .vscode
 portfolio.code-workspace
 note.txt
+/__pycache__
+__pycache__
