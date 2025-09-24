@@ -1,5 +1,19 @@
 [
   {
+    "title": "Event Book",
+    "description": "A containerized ticketing platform built with Django, featuring QR-based ticket validation, downloadable PDF tickets via email, smooth partial updates with HTMX and an admin dashboard for attendee tracking.",
+    "stack": "Python, Django, HTMX, Tailwind, Postgres, Docker",
+    "code_url": "https://github.com/Tarvel/event-booking",
+    "live_url": "https://event-booking-h693.onrender.com",
+    "images": [
+  "static/PROJECT_IMAGES/event_book/eb1.png",
+  "static/PROJECT_IMAGES/event_book/eb2.png",
+  "static/PROJECT_IMAGES/event_book/eb3.png",
+  "static/PROJECT_IMAGES/event_book/eb4.png",
+  "static/PROJECT_IMAGES/event_book/eb5.jpg"
+]
+  },
+  {
     "title": "Streetwear Ecommerce Website",
     "description": "A minimalist fashion e-commerce platform for a streetwear brand, featuring themed product drops, cart persistence without login, filterable collections, and a smooth checkout flow with PayStack integration.",
     "stack": "Python, Django, Django templates, Tailwind, SQLite",
