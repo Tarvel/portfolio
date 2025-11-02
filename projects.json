@@ -48,6 +48,18 @@
     "images": ["static/PROJECT_IMAGES/portfolio/portfolio.png"]
   },
   {
+    "title": "ICT Record Management System",
+    "description": "A secure and structured internal tool built for managing repair records within an ICT Department. It allows authorized ICT personnel to log repair activities, send confirmation emails, receive feedback and lock records after confirmation, reducing impersonation, tampering and data mismanagement.",
+    "stack": "Python, Django, HTMX, Tailwind CSS, SQLite/PostgreSQL, SMTP",
+    "code_url": "https://github.com/Tarvel/ict-record-manager",
+    "live_url": "null",
+    "images": [
+      "static/PROJECT_IMAGES/ict_record_manager/irm_1.png",
+      "static/PROJECT_IMAGES/ict_record_manager/irm_2.png",
+      "static/PROJECT_IMAGES/ict_record_manager/irm_3.png"
+    ]
+  },
+  {
     "title": "Cooperative Management System",
     "description": "A Django-based cooperative management system allowing members to handle deposits, withdrawals, loan applications, and dividend tracking, with robust admin tools for member management, transaction approvals, loan processing, and dividend distribution.",
     "stack": "Python, Django, SQLite, HTML, Tailwind CSS",
@@ -80,62 +92,6 @@
     "description": "A Flask webhook for a WhatsApp chatbot that receives messages, generates AI responses using Google Gemini, and replies via the WhatsApp Cloud API.",
     "stack": "Python, Flask, WhatsApp Cloud API, Google Gemini API",
     "code_url": "https://github.com/Tarvel/WhatsappChatbot",
-    "live_url": "null",
-    "images": "null"
-  },
-  {
-    "title": "Flask ChatApp",
-    "description": "Flask Application that allows real-time communication between people.",
-    "stack": "Python, Flask, Socketio",
-    "code_url": "https://github.com/Tarvel/flask_chat_app",
-    "live_url": "null",
-    "images": "null"
-  },
-  {
-    "title": "RESTful APIs App",
-    "description": "Flask API that registers and authenticates user. Create, delete and add users to organisations.",
-    "stack": "Python, Flask, Flask_JWT, Postgres",
-    "code_url": "https://github.com/Tarvel/HngTask2",
-    "live_url": "null",
-    "images": "null"},
-
-  {
-    "title": "Student Register CRUD App",
-    "description": "Flask Application to do simple Create, Read, Update and Delete on a database.",
-    "stack": "Python, Flask, Bootstrap, SQLite",
-    "code_url": "https://github.com/Tarvel/StudentTableRegister",
-    "live_url": "null",
-    "images": "null"
-  },
-  {
-    "title": "Task Manager",
-    "description": "Flask task manager app that notifies you in real time when deadline set for task is up.",
-    "stack": "Python, Flask, Socketio",
-    "code_url": "https://github.com/Tarvel/beter-task-manager",
-    "live_url": "null",
-    "images": "null"
-  },
-  {
-    "title": "User Info Weather API",
-    "description": "Flask API that Posts user's name then get user Ip, city and temperature.",
-    "stack": "Python, Flask, IPInfo",
-    "code_url": "https://github.com/Tarvel/api_endpoint",
-    "live_url": "null",
-    "images": "null"
-  },
-  {
-    "title": "Result Stalker",
-    "description": "An automatic script that monitors my school portal for newly released results.",
-    "stack": "Python, Playwright, Python-SMTP, Twilio",
-    "code_url": "https://github.com/Tarvel/Result_Stalker",
-    "live_url": "null",
-    "images": "null"
-  },
-  {
-    "title": "Task Queue",
-    "description": "Flask Application to do simple Create, Read, Update and Delete on a database.",
-    "stack": "Python, Flask, Bootstrap, SQLite",
-    "code_url": "https://github.com/Tarvel/task-queue",
     "live_url": "null",
     "images": "null"
   }
