@@ -1,6 +1,20 @@
 [
   {
+    "title": "I Call On",
+    "date": "2025",
+    "description": "A real-time multiplayer word game inspired by the classic 'Stop' party game. Players join rooms, compete to fill categories (Name, Animal, Food, Place, Thing) with words starting with a random letter, and can challenge invalid answers during a review phase.",
+    "stack": "Python, Django, Django Channels, WebSockets, Tailwind CSS, Docker",
+    "code_url": "https://github.com/Tarvel/i-call-on-game",
+    "live_url": "https://i-call-on.fly.dev",
+    "images": [
+      "static/PROJECT_IMAGES/i_call_on/i_call_on_1.jpg",
+      "static/PROJECT_IMAGES/i_call_on/i_call_on_2.jpg",
+      "static/PROJECT_IMAGES/i_call_on/i_call_on_3.jpg"
+    ]
+  },
+  {
     "title": "Event Book",
+    "date": "2025",
     "description": "A containerized ticketing platform built with Django, featuring QR-based ticket validation, downloadable PDF tickets via email, smooth partial updates with HTMX and an admin dashboard for attendee tracking.",
     "stack": "Python, Django, HTMX, Tailwind, Postgres, Docker",
     "code_url": "https://github.com/Tarvel/event-booking",
@@ -15,6 +29,7 @@
   },
   {
     "title": "Streetwear Ecommerce Website",
+    "date": "2025",
     "description": "A minimalist fashion e-commerce platform for a streetwear brand, featuring themed product drops, cart persistence without login, filterable collections, and a smooth checkout flow with PayStack integration.",
     "stack": "Python, Django, Django templates, Tailwind, SQLite",
     "code_url": "https://github.com/Tarvel/streetwear-ecommerce",
@@ -29,6 +44,7 @@
   },
   {
     "title": "FunChat",
+    "date": "2025",
     "description": "A Django-based community discussion platform where users can register, join topic-based chat rooms, post messages, and explore conversations by topics or activity.",
     "stack": "Python, Django, SQLite/PostgreSQL, HTML/CSS",
     "code_url": "https://github.com/Tarvel/FunChat",
@@ -41,6 +57,7 @@
   },
   {
     "title": "Personal Portfolio Website",
+    "date": "2025",
     "description": "Creating a portfolio website using Flask (micro-framework).",
     "stack": "Python, Flask, Bootstrap",
     "code_url": "https://github.com/Tarvel/portfolio",
@@ -49,6 +66,7 @@
   },
   {
     "title": "ICT Record Management System",
+    "date": "2025",
     "description": "A secure and structured internal tool built for managing repair records within an ICT Department. It allows authorized ICT personnel to log repair activities, send confirmation emails, receive feedback and lock records after confirmation, reducing impersonation, tampering and data mismanagement.",
     "stack": "Python, Django, HTMX, Tailwind CSS, SQLite/PostgreSQL, SMTP",
     "code_url": "https://github.com/Tarvel/ict-record-manager",
@@ -61,6 +79,7 @@
   },
   {
     "title": "Cooperative Management System",
+    "date": "2025",
     "description": "A Django-based cooperative management system allowing members to handle deposits, withdrawals, loan applications, and dividend tracking, with robust admin tools for member management, transaction approvals, loan processing, and dividend distribution.",
     "stack": "Python, Django, SQLite, HTML, Tailwind CSS",
     "code_url": "https://github.com/Tarvel/coorperative-management-system/",
@@ -73,6 +92,7 @@
   },
   {
     "title": "Ecommerce Website",
+    "date": "2024",
     "description": "A full-stack ecommerce website built with Flask, featuring product management, shopping cart, user authentication, and order tracking, showcasing a complete web application development skillset.",
     "stack": "Python, Bootstrap, Postgresql",
     "code_url": "https://github.com/Tarvel/eCommerce",
@@ -81,6 +101,7 @@
   },
   {
     "title": "EasyUploader",
+    "date": "2024",
     "description": "Local file utility app that lets users upload files, browse and download files from a directory, and receive local desktop notifications via HTTP.",
     "stack": "Python, Flask, Flask-WTF, Plyer",
     "code_url": "https://github.com/Tarvel/EasyUploader",
@@ -89,6 +110,7 @@
   },
   {
     "title": "Whatsapp Chatbot",
+    "date": "2024",
     "description": "A Flask webhook for a WhatsApp chatbot that receives messages, generates AI responses using Google Gemini, and replies via the WhatsApp Cloud API.",
     "stack": "Python, Flask, WhatsApp Cloud API, Google Gemini API",
     "code_url": "https://github.com/Tarvel/WhatsappChatbot",

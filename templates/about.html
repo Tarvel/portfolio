@@ -3,65 +3,215 @@
 {% block title %}About | Tai{% endblock %}
 
 {% block content %}
-<section class="mb-5 hero-section animate__animated animate__fadeIn">
-  <div class="text-center">
-    <h2 class="text-info display-4">About Me</h2>
-    <p class="intro-text lead">I'm Taiye Babatunde, a Computer Engineering student at the University of Ilorin with a passion for backend development, cybersecurity, and automation. I’ve gained hands-on experience through personal projects, internships like HNG, and collaborative work. My skills include Python, Flask, Django, PostgreSQL, Linux, and tools like Docker, Playwright. I’m constantly learning and diving deeper into Backend and DevOps while building innovative projects.</p>
-    <a class="btn btn-outline-light btn-lg mt-3" href="{{ url_for('download_file') }}" target="_blank"><i class="fas fa-download"></i> Resume</a>
-  </div>
-</section>
-
-<section class="mb-5">
-  <h3 class="text-secondary">Skills</h3>
-  <div class="d-flex flex-wrap justify-content-center">
-    <div class="text-center m-3">
-      <i class="fab fa-python fa-2x text-info"></i>
-      <p class="text-info">Python</p>
-    </div>
-    <div class="text-center m-3">
-      <i class="fas fa-laptop-code fa-2x text-info"></i>
-      <p class="text-info">Flask</p>
-    </div>
-    <div class="text-center m-3">
-      <i class="fas fa-globe fa-2x text-info"></i>
-      <p class="text-info">Django</p>
-    </div>
-    
-    <div class="text-center m-3">
-      <i class="fab fa-linux fa-2x text-info"></i>
-      <p class="text-info">Linux</p>
-    </div>
-  </div>
-  <div class="mt-4 text-center">
-    <h5 class="text-secondary">Other Tools & Technologies</h5>
-    <span class="badge bg-dark text-light me-1">Git & GitHub</span>
-    <span class="badge bg-dark text-light me-1">HTML</span>
-    <span class="badge bg-dark text-light me-1">CSS</span>
-    <span class="badge bg-dark text-light me-1">Docker</span>
-    <span class="badge bg-dark text-light me-1">Playwright</span>
-    <span class="badge bg-dark text-light me-1">PostgreSQL</span>
-    {% set celery = 'no' %}
-    {% if celey == 'yes' %}
-    <span class="badge bg-dark text-light me-1">Celery</span>
-    <span class="badge bg-dark text-light me-1">Redis</span>
-    {% endif %}
-    
-    
-  </div>
-</section>
-
 <style>
-  .hero-section {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5));
-    padding: 2rem;
-    border-radius: 10px;
+  .about-hero {
+    text-align: center;
+    padding: 3rem 0;
+    animation: fadeInUp 0.8s ease-out;
   }
-  .animate__fadeIn {
-    animation: fadeIn 1s ease-in;
+
+  .about-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
-  @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+
+  .about-tagline {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    font-weight: 500;
+  }
+
+  .about-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    max-width: 800px;
+    margin: 0 auto 2.5rem;
+  }
+
+  .resume-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--accent-primary);
+    color: var(--text-primary);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+  }
+
+  .resume-btn:hover {
+    background: var(--accent-gradient);
+    border-color: transparent;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg), var(--shadow-glow);
+  }
+
+  .skills-section {
+    margin-top: 5rem;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+  }
+
+  .section-heading {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 2rem;
+    max-width: 600px;
+    margin: 0 auto 4rem;
+  }
+
+  .skill-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    cursor: default;
+  }
+
+  .skill-card:hover {
+    transform: translateY(-8px) scale(1.05);
+    background: rgba(255, 255, 255, 0.06);
+    border-color: var(--accent-primary);
+    box-shadow: var(--shadow-md), 0 0 25px rgba(59, 130, 246, 0.3);
+  }
+
+  .skill-icon {
+    font-size: 2.5rem;
+    color: var(--accent-primary);
+    transition: all 0.3s ease;
+  }
+
+  .skill-card:hover .skill-icon {
+    transform: scale(1.2) rotate(-5deg);
+    filter: drop-shadow(0 0 10px var(--accent-primary));
+  }
+
+  .skill-name {
+    font-weight: 500;
+    color: var(--text-primary);
+  }
+
+  .tools-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .tool-badge {
+    padding: 0.75rem 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+    border-radius: 50px;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: default;
+  }
+
+  .tool-badge:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-sm);
+  }
+
+  @media (max-width: 768px) {
+    .about-title {
+      font-size: 2.2rem;
+    }
+
+    .about-description {
+      font-size: 1rem;
+    }
+
+    .skills-grid {
+      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+      gap: 1.5rem;
+    }
   }
 </style>
+
+<section class="about-hero">
+  <h2 class="about-title">About Me</h2>
+  <p class="about-tagline">Backend Developer | Python Engineer | Building Scalable Systems</p>
+  <p class="about-description">
+    I am Taiye Babatunde, a backend developer who enjoys building fast and reliable web applications using Python,
+    Django and Flask. I focus on creating scalable systems, automation tools and secure backend services. I've gained
+    experience from personal projects, internships and collaborations. I am continuously improving my skills in backend
+    engineering, DevOps and cybersecurity.
+  </p>
+  <a class="resume-btn" href="{{ url_for('download_file') }}" target="_blank">
+    <i class="fas fa-download"></i>
+    Download Resume
+  </a>
+</section>
+
+<section class="skills-section">
+  <h3 class="section-heading">Core Skills</h3>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <i class="fab fa-python skill-icon"></i>
+      <span class="skill-name">Python</span>
+    </div>
+    <div class="skill-card">
+      <i class="fas fa-laptop-code skill-icon"></i>
+      <span class="skill-name">Flask</span>
+    </div>
+    <div class="skill-card">
+      <i class="fas fa-globe skill-icon"></i>
+      <span class="skill-name">Django</span>
+    </div>
+    <div class="skill-card">
+      <i class="fab fa-linux skill-icon"></i>
+      <span class="skill-name">Linux</span>
+    </div>
+  </div>
+
+  <h3 class="section-heading">Tools & Technologies</h3>
+  <div class="tools-cloud">
+    <span class="tool-badge">Git & GitHub</span>
+    <span class="tool-badge">HTML</span>
+    <span class="tool-badge">CSS</span>
+    <span class="tool-badge">Docker</span>
+    <span class="tool-badge">Playwright</span>
+    <span class="tool-badge">PostgreSQL</span>
+    {% set celery = 'no' %}
+    {% if celery == 'yes' %}
+    <span class="tool-badge">Celery</span>
+    <span class="tool-badge">Redis</span>
+    {% endif %}
+  </div>
+</section>
 {% endblock %}

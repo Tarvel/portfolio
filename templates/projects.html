@@ -2,73 +2,442 @@
 {% block title %}Projects | Tai{% endblock %}
 
 {% block content %}
-<section class="mb-5">
-  <h2 class="text-info">Projects</h2>
-  <p class="intro-text">Check out my projects below! You'll find a selection of work that highlights my skills as a backend developer.</p>
-  <div class="row">
-    {% for project in projects %}
-    <div class="col-md-4 mb-4">
-      <div class="card bg-dark text-white">
-        {% if project.images %}
+<style>
+  .projects-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    animation: fadeInUp 0.8s ease-out;
+  }
 
-        <img src="{{ project.images[0] }}" 
-             class="card-img-top img-fluid" 
-             alt="" 
-             style="cursor: pointer;"
-             data-bs-toggle="modal" 
-             data-bs-target="#projectModal{{ loop.index }}">
-        {% endif %}
-        <div class="card-body">
-          <div class="d-flex justify-content-between align-items-center">
-            <h5 class="card-title font-weight-bold text-info">{{ project.title }}</h5>
-            <span class="badge bg-secondary rounded-pill">{{ project.date }}</span>
-          </div>
-          <p class="card-text mt-2">{{ project.description }}</p>
-          <p class="text-warning"><em>{{ project.stack }}</em></p>
-          <div class="d-flex flex-wrap">
-            {% if project.code_url %}
-            <a href="{{ project.code_url }}" class="btn btn-primary btn-sm me-2 mb-2" target="_blank" rel="noopener noreferrer">GitHub</a>
-            {% endif %}
-            {% if project.live_url != 'null' %}
-            <a href="{{ project.live_url }}" class="btn btn-success btn-sm me-2 mb-2" target="_blank" rel="noopener noreferrer">Live Demo</a>
-            {% endif %}
-          </div>
-        </div>
-      </div>
-    </div>
+  .projects-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
-    
+  .projects-subtitle {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2.5rem;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+  }
+
+  .project-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .project-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--accent-gradient);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 0;
+  }
+
+  .project-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent-primary);
+    box-shadow: var(--shadow-lg), 0 0 30px rgba(59, 130, 246, 0.3);
+  }
+
+  .project-card:hover::before {
+    opacity: 0.05;
+  }
+
+  .project-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  .project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .project-card:hover .project-image {
+    transform: scale(1.1);
+  }
+
+  .project-date-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    color: var(--text-primary);
+    font-size: 0.85rem;
+    font-weight: 500;
+    z-index: 1;
+  }
+
+  .project-body {
+    padding: 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .project-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  .project-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+  }
+
+  .project-stack {
+    font-size: 0.9rem;
+    color: var(--accent-primary);
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+  }
+
+  .project-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .project-btn {
+    padding: 0.7rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .project-btn-github {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+  }
+
+  .project-btn-github:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: var(--accent-primary);
+    transform: translateY(-2px);
+  }
+
+  .project-btn-live {
+    background: var(--accent-gradient);
+    color: white;
+    border: 1px solid transparent;
+  }
+
+  .project-btn-live:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md), var(--shadow-glow);
+  }
+
+  /* Modal Styles */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 0.3s ease;
+  }
+
+  .modal.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    overflow: hidden;
+    animation: slideUp 0.3s ease;
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .modal-header {
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .modal-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--accent-primary);
+  }
+
+  .modal-close {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--text-primary);
+  }
+
+  .modal-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(90deg);
+  }
+
+  .carousel {
+    position: relative;
+  }
+
+  .carousel-inner img {
+    width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+  }
+
+  .carousel-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    pointer-events: none;
+  }
+
+  .carousel-btn {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    pointer-events: all;
+    color: white;
+  }
+
+  .carousel-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+  }
+
+  @media (max-width: 768px) {
+    .projects-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .projects-title {
+      font-size: 2.2rem;
+    }
+
+    .modal-content {
+      max-width: 95%;
+    }
+  }
+</style>
+
+<div class="projects-header">
+  <h2 class="projects-title">Projects</h2>
+  <p class="projects-subtitle">Check out my projects below! You'll find a selection of work that highlights my skills as
+    a backend developer.</p>
+</div>
+
+<div class="projects-grid">
+  {% for project in projects %}
+  <div class="project-card">
     {% if project.images %}
-    <div class="modal fade" id="projectModal{{ loop.index }}" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content bg-dark">
-          <div class="modal-body p-0">
-            <div id="carousel{{ loop.index }}" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                {% for image in project.images %}
-                <div class="carousel-item {% if loop.first %}active{% endif %}">
-                  <img src="{{ image }}" class="d-block w-100" alt="{{ project.title }}">
-                </div>
-                {% endfor %}
-              </div>
-              
-              <button class="carousel-control-prev" type="button" data-bs-target="#carousel{{ loop.index }}" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carousel{{ loop.index }}" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-              </button>
-            </div>
-          </div>
-          <div class="modal-footer bg-dark">
-            <h5 class="text-info mb-0">{{ project.title }}</h5>
-            <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
+    <div class="project-image-wrapper" onclick="openModal('modal{{ loop.index }}')">
+      <img src="{{ project.images[0] }}" class="project-image" alt="{{ project.title }}">
+      <div class="project-date-badge">{{ project.date }}</div>
+    </div>
+    {% else %}
+    <div class="project-image-wrapper">
+      <div class="project-date-badge">{{ project.date }}</div>
     </div>
     {% endif %}
-    {% endfor %}
+
+    <div class="project-body">
+      <h3 class="project-title">{{ project.title }}</h3>
+      <p class="project-description">{{ project.description }}</p>
+      <p class="project-stack">{{ project.stack }}</p>
+
+      <div class="project-links">
+        {% if project.code_url %}
+        <a href="{{ project.code_url }}" class="project-btn project-btn-github" target="_blank"
+          rel="noopener noreferrer">
+          <i class="fab fa-github"></i>
+          GitHub
+        </a>
+        {% endif %}
+        {% if project.live_url != 'null' %}
+        <a href="{{ project.live_url }}" class="project-btn project-btn-live" target="_blank" rel="noopener noreferrer">
+          <i class="fas fa-external-link-alt"></i>
+          Live Demo
+        </a>
+        {% endif %}
+      </div>
+    </div>
   </div>
-</section>
+
+  {% if project.images %}
+  <div id="modal{{ loop.index }}" class="modal" onclick="closeModal('modal{{ loop.index }}')">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <h4 class="modal-title">{{ project.title }}</h4>
+        <div class="modal-close" onclick="closeModal('modal{{ loop.index }}')">
+          <i class="fas fa-times"></i>
+        </div>
+      </div>
+
+      <div class="carousel" id="carousel{{ loop.index }}">
+        <div class="carousel-inner">
+          {% for image in project.images %}
+          <div class="carousel-item {% if loop.first %}active{% endif %}">
+            <img src="{{ image }}" alt="{{ project.title }}">
+          </div>
+          {% endfor %}
+        </div>
+
+        {% if project.images|length > 1 %}
+        <div class="carousel-controls">
+          <div class="carousel-btn" onclick="prevSlide('carousel{{ loop.index }}')">
+            <i class="fas fa-chevron-left"></i>
+          </div>
+          <div class="carousel-btn" onclick="nextSlide('carousel{{ loop.index }}')">
+            <i class="fas fa-chevron-right"></i>
+          </div>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% endif %}
+  {% endfor %}
+</div>
+
+<script>
+  function openModal(modalId) {
+    document.getElementById(modalId).classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal(modalId) {
+    document.getElementById(modalId).classList.remove('show');
+    document.body.style.overflow = 'auto';
+  }
+
+  function showSlide(carouselId, index) {
+    const carousel = document.getElementById(carouselId);
+    const items = carousel.querySelectorAll('.carousel-item');
+    items.forEach((item, i) => {
+      item.classList.toggle('active', i === index);
+      item.style.display = i === index ? 'block' : 'none';
+    });
+  }
+
+  function nextSlide(carouselId) {
+    const carousel = document.getElementById(carouselId);
+    const items = carousel.querySelectorAll('.carousel-item');
+    let currentIndex = Array.from(items).findIndex(item => item.classList.contains('active'));
+    let nextIndex = (currentIndex + 1) % items.length;
+    showSlide(carouselId, nextIndex);
+  }
+
+  function prevSlide(carouselId) {
+    const carousel = document.getElementById(carouselId);
+    const items = carousel.querySelectorAll('.carousel-item');
+    let currentIndex = Array.from(items).findIndex(item => item.classList.contains('active'));
+    let prevIndex = (currentIndex - 1 + items.length) % items.length;
+    showSlide(carouselId, prevIndex);
+  }
+
+  // Initialize carousels
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.carousel').forEach(carousel => {
+      const items = carousel.querySelectorAll('.carousel-item');
+      items.forEach((item, i) => {
+        item.style.display = i === 0 ? 'block' : 'none';
+      });
+    });
+  });
+
+  // Close modal on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.modal.show').forEach(modal => {
+        modal.classList.remove('show');
+        document.body.style.overflow = 'auto';
+      });
+    }
+  });
+</script>
 {% endblock %}
