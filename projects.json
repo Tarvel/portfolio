@@ -4,12 +4,26 @@
     "date": "2025",
     "description": "A real-time multiplayer word game inspired by the classic 'Stop' party game. Players join rooms, compete to fill categories (Name, Animal, Food, Place, Thing) with words starting with a random letter, and can challenge invalid answers during a review phase.",
     "stack": "Python, Django, Django Channels, WebSockets, Tailwind CSS, Docker",
-    "code_url": "https://github.com/Tarvel/i-call-on-game",
-    "live_url": "https://i-call-on.fly.dev",
+    "code_url": "https://callon.games",
+    "live_url": "https://callon.games",
     "images": [
-      "static/PROJECT_IMAGES/i_call_on/i_call_on_1.jpg",
-      "static/PROJECT_IMAGES/i_call_on/i_call_on_2.jpg",
-      "static/PROJECT_IMAGES/i_call_on/i_call_on_3.jpg"
+      "static/PROJECT_IMAGES/i_call_on/i_call_on_1.png",
+      "static/PROJECT_IMAGES/i_call_on/i_call_on_2.png",
+      "static/PROJECT_IMAGES/i_call_on/i_call_on_3.png"
+    ]
+  },
+  {
+    "title": "RepairDesk",
+    "date": "2026",
+    "description": "A robust, web-based repair management system designed for device repair shops. It streamlines the entire repair lifecycle—from customer intake and initial diagnosis to parts management, quality control, and final collection using a custom finite-state machine.",
+    "stack": "Python, Django, django-fsm, HTMX, Alpine.js, Tailwind CSS",
+    "code_url": "https://github.com/Tarvel/RepairDesk",
+    "live_url": "https://repair-desk-7d5dcba197b3.herokuapp.com/",
+    "images": [
+      "static/PROJECT_IMAGES/repairdesk/repairdesk1.png",
+      "static/PROJECT_IMAGES/repairdesk/repairdesk2.png",
+      "static/PROJECT_IMAGES/repairdesk/repairdesk3.png",
+      "static/PROJECT_IMAGES/repairdesk/repairdesk4.png"
     ]
   },
   {
@@ -18,7 +32,7 @@
     "description": "A containerized ticketing platform built with Django, featuring QR-based ticket validation, downloadable PDF tickets via email, smooth partial updates with HTMX and an admin dashboard for attendee tracking.",
     "stack": "Python, Django, HTMX, Tailwind, Postgres, Docker",
     "code_url": "https://github.com/Tarvel/event-booking",
-    "live_url": "https://event-booking-h693.onrender.com",
+    "live_url": "https://event-book-efb7e3b59b4c.herokuapp.com/",
     "images": [
   "static/PROJECT_IMAGES/event_book/eb1.png",
   "static/PROJECT_IMAGES/event_book/eb2.png",
