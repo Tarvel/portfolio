@@ -4,7 +4,7 @@
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![SMTP](https://img.shields.io/badge/Email-SMTP-orange?style=for-the-badge&logo=gmail&logoColor=white)
 
-A personal **portfolio website** built with Flask to showcase my projects, skills, and experiences.  
+My personal **portfolio website** built with Flask to showcase my projects, skills, and experiences.  
 It features dynamic project loading from JSON, responsive templates and an email contact form with SMTP integration.  
 
 
